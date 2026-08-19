@@ -6,5 +6,11 @@ namespace Projeto01
         {
             InitializeComponent();
         }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSobre sobreForm = new frmSobre();
+            sobreForm.ShowDialog();
+        }
     }
 }

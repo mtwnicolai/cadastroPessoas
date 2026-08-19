@@ -31,6 +31,8 @@
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             sobreToolStripMenuItem = new ToolStripMenuItem();
+            tituloPrincipal = new Label();
+            descPrincipal = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -40,30 +42,52 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, sobreToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 33);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(640, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // cadastroToolStripMenuItem
             // 
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(99, 29);
+            cadastroToolStripMenuItem.Size = new Size(82, 24);
             cadastroToolStripMenuItem.Text = "Cadastro";
-            cadastroToolStripMenuItem.Click += this.cadastroToolStripMenuItem_Click;
             // 
             // sobreToolStripMenuItem
             // 
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(75, 29);
+            sobreToolStripMenuItem.Size = new Size(62, 24);
             sobreToolStripMenuItem.Text = "Sobre";
+            sobreToolStripMenuItem.Click += sobreToolStripMenuItem_Click;
+            // 
+            // tituloPrincipal
+            // 
+            tituloPrincipal.AutoSize = true;
+            tituloPrincipal.Location = new Point(46, 88);
+            tituloPrincipal.Name = "tituloPrincipal";
+            tituloPrincipal.Size = new Size(192, 20);
+            tituloPrincipal.TabIndex = 1;
+            tituloPrincipal.Text = "Bem vindo(a) ao Programa!";
+            // 
+            // descPrincipal
+            // 
+            descPrincipal.AutoSize = true;
+            descPrincipal.Location = new Point(46, 136);
+            descPrincipal.Name = "descPrincipal";
+            descPrincipal.Size = new Size(551, 20);
+            descPrincipal.TabIndex = 2;
+            descPrincipal.Text = "Para ver mais sobre o programa, ou usa-lo vocè pode acessar as opções do menu.";
             // 
             // frmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(640, 360);
+            Controls.Add(descPrincipal);
+            Controls.Add(tituloPrincipal);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(2);
             Name = "frmPrincipal";
             Text = "Página Principal";
             menuStrip1.ResumeLayout(false);
@@ -77,5 +101,7 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
+        private Label tituloPrincipal;
+        private Label descPrincipal;
     }
 }
