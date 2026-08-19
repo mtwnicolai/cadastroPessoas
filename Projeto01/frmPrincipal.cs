@@ -12,5 +12,11 @@ namespace Projeto01
             frmSobre sobreForm = new frmSobre();
             sobreForm.ShowDialog();
         }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastro cadForm = new frmCadastro();
+            cadForm.Show();
+        }
     }
 }

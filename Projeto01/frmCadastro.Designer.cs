@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             btnCad = new Button();
-            btnApagar = new Button();
             nomeBox = new TextBox();
             idadeBox = new TextBox();
             cpfBox = new TextBox();
@@ -40,7 +39,9 @@
             setorBox = new TextBox();
             tituloFuncao = new Label();
             tituloSetor = new Label();
-            listView1 = new ListView();
+            listaPessoas = new ListView();
+            btnLimpar = new Button();
+            btnFechar = new Button();
             SuspendLayout();
             // 
             // btnCad
@@ -51,15 +52,7 @@
             btnCad.TabIndex = 0;
             btnCad.Text = "Cadastrar";
             btnCad.UseVisualStyleBackColor = true;
-            // 
-            // btnApagar
-            // 
-            btnApagar.Location = new Point(50, 109);
-            btnApagar.Name = "btnApagar";
-            btnApagar.Size = new Size(94, 29);
-            btnApagar.TabIndex = 1;
-            btnApagar.Text = "Apagar";
-            btnApagar.UseVisualStyleBackColor = true;
+            btnCad.Click += btnCad_Click;
             // 
             // nomeBox
             // 
@@ -141,20 +134,41 @@
             tituloSetor.TabIndex = 11;
             tituloSetor.Text = "Setor:";
             // 
-            // listView1
+            // listaPessoas
             // 
-            listView1.Location = new Point(31, 224);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(738, 121);
-            listView1.TabIndex = 12;
-            listView1.UseCompatibleStateImageBehavior = false;
+            listaPessoas.Location = new Point(31, 224);
+            listaPessoas.Name = "listaPessoas";
+            listaPessoas.Size = new Size(738, 152);
+            listaPessoas.TabIndex = 12;
+            listaPessoas.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnLimpar
+            // 
+            btnLimpar.Location = new Point(50, 113);
+            btnLimpar.Name = "btnLimpar";
+            btnLimpar.Size = new Size(94, 29);
+            btnLimpar.TabIndex = 13;
+            btnLimpar.Text = "Limpar";
+            btnLimpar.UseVisualStyleBackColor = true;
+            // 
+            // btnFechar
+            // 
+            btnFechar.Location = new Point(694, 409);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(94, 29);
+            btnFechar.TabIndex = 14;
+            btnFechar.Text = "Fechar";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // frmCadastro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(listView1);
+            Controls.Add(btnFechar);
+            Controls.Add(btnLimpar);
+            Controls.Add(listaPessoas);
             Controls.Add(tituloSetor);
             Controls.Add(tituloFuncao);
             Controls.Add(setorBox);
@@ -165,10 +179,10 @@
             Controls.Add(cpfBox);
             Controls.Add(idadeBox);
             Controls.Add(nomeBox);
-            Controls.Add(btnApagar);
             Controls.Add(btnCad);
             Name = "frmCadastro";
             Text = "Cadastro de Pessoas";
+            //Load += frmCadastro_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,7 +190,6 @@
         #endregion
 
         private Button btnCad;
-        private Button btnApagar;
         private TextBox nomeBox;
         private TextBox idadeBox;
         private TextBox cpfBox;
@@ -187,6 +200,8 @@
         private TextBox setorBox;
         private Label tituloFuncao;
         private Label tituloSetor;
-        private ListView listView1;
+        private ListView listaPessoas;
+        private Button btnLimpar;
+        private Button btnFechar;
     }
 }
