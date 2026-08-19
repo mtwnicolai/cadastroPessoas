@@ -25,7 +25,7 @@ namespace Projeto01
         {
             Pessoa ps = new Pessoa();
 
-            if (cpfBox.Text.Length < 11 || cpfBox.Text.Length > 11) 
+            if (cpfBox.Text.Length < 11 || cpfBox.Text.Length > 11)
             {
                 MessageBox.Show("Opa!", "Parece que tem algo de errado com seu cpf...");
             }
@@ -33,7 +33,7 @@ namespace Projeto01
             {
                 ps.cpf = cpfBox.Text;
             }
-            
+
             ps.nome = nomeBox.Text;
             ps.data = dataNascBox.Text;
             if (telBox.Text.Length < 11 || telBox.Text.Length > 11)
@@ -163,6 +163,11 @@ namespace Projeto01
             lograBox.Clear();
             numBox.Clear();
             compleBox.Clear();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

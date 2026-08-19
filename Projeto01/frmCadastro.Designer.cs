@@ -185,9 +185,10 @@
             label1.Font = new Font("Segoe UI", 10F);
             label1.Location = new Point(22, 53);
             label1.Name = "label1";
-            label1.Size = new Size(268, 23);
+            label1.Size = new Size(273, 23);
             label1.TabIndex = 22;
-            label1.Text = "Aqui você pode cadastro pessoas!";
+            label1.Text = "Aqui você pode cadastrar pessoas!";
+            label1.Click += label1_Click;
             // 
             // cidadeBox
             // 
