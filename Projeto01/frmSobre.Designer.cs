@@ -28,30 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tituloSobre = new Label();
-            p1Sobre = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSobre));
             btnFecharSobre = new Button();
+            desSobre = new Label();
+            tituloSobre = new Label();
             SuspendLayout();
-            // 
-            // tituloSobre
-            // 
-            tituloSobre.AutoSize = true;
-            tituloSobre.Font = new Font("Segoe UI", 13F);
-            tituloSobre.Location = new Point(12, 65);
-            tituloSobre.Name = "tituloSobre";
-            tituloSobre.Size = new Size(173, 30);
-            tituloSobre.TabIndex = 0;
-            tituloSobre.Text = "Sobre o sistema:";
-            // 
-            // p1Sobre
-            // 
-            p1Sobre.AutoSize = true;
-            p1Sobre.Font = new Font("Segoe UI", 9F);
-            p1Sobre.Location = new Point(42, 137);
-            p1Sobre.Name = "p1Sobre";
-            p1Sobre.Size = new Size(450, 20);
-            p1Sobre.TabIndex = 1;
-            p1Sobre.Text = "- Sistema criado no intuito de aprendizagem de formulários no C#";
             // 
             // btnFecharSobre
             // 
@@ -63,14 +44,34 @@
             btnFecharSobre.UseVisualStyleBackColor = true;
             btnFecharSobre.Click += btnFecharSobre_Click;
             // 
+            // desSobre
+            // 
+            desSobre.AutoSize = true;
+            desSobre.Font = new Font("Segoe UI", 9F);
+            desSobre.Location = new Point(12, 80);
+            desSobre.Name = "desSobre";
+            desSobre.Size = new Size(552, 120);
+            desSobre.TabIndex = 28;
+            desSobre.Text = resources.GetString("desSobre.Text");
+            // 
+            // tituloSobre
+            // 
+            tituloSobre.AutoSize = true;
+            tituloSobre.Font = new Font("Segoe UI", 13F);
+            tituloSobre.Location = new Point(12, 20);
+            tituloSobre.Name = "tituloSobre";
+            tituloSobre.Size = new Size(192, 30);
+            tituloSobre.TabIndex = 26;
+            tituloSobre.Text = "Menu de Cadastro";
+            // 
             // frmSobre
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(571, 308);
-            Controls.Add(btnFecharSobre);
-            Controls.Add(p1Sobre);
+            Controls.Add(desSobre);
             Controls.Add(tituloSobre);
+            Controls.Add(btnFecharSobre);
             Name = "frmSobre";
             Text = "Sobre o Sistema";
             Load += frmSobre_Load;
@@ -79,9 +80,8 @@
         }
 
         #endregion
-
-        private Label tituloSobre;
-        private Label p1Sobre;
         private Button btnFecharSobre;
+        private Label desSobre;
+        private Label tituloSobre;
     }
 }

@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="desSobre.Text" xml:space="preserve">
+    <value>Este é um sistema de cadastro de pessoas, desenvolvido com o objetivo
+de gerenciar informações de indivíduos de forma simples, organizada e eficiente. 
+A aplicação permite realizar as operações básicas.
+
+O projeto foi criado com o propósito de praticar e consolidar conceitos 
+de desenvolvimento de software, mais precisamente com C#</value>
+  </data>
 </root>

@@ -7,16 +7,18 @@ namespace Projeto01
             InitializeComponent();
         }
 
-        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmSobre sobreForm = new frmSobre();
-            sobreForm.ShowDialog();
-        }
+        
 
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCad_Click(object sender, EventArgs e)
         {
             frmCadastro cadForm = new frmCadastro();
             cadForm.Show();
+        }
+
+        private void btnSobre_Click(object sender, EventArgs e)
+        {
+            frmSobre sobreForm = new frmSobre();
+            sobreForm.ShowDialog();
         }
     }
 }

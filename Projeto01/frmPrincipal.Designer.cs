@@ -28,81 +28,130 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
-            sobreToolStripMenuItem = new ToolStripMenuItem();
-            tituloPrincipal = new Label();
-            descPrincipal = new Label();
-            menuStrip1.SuspendLayout();
+            label1 = new Label();
+            tituloCadastro = new Label();
+            label2 = new Label();
+            btnSobre = new Button();
+            btnCad = new Button();
+            BottomToolStripPanel = new ToolStripPanel();
+            TopToolStripPanel = new ToolStripPanel();
+            RightToolStripPanel = new ToolStripPanel();
+            LeftToolStripPanel = new ToolStripPanel();
+            ContentPanel = new ToolStripContentPanel();
             SuspendLayout();
             // 
-            // menuStrip1
+            // label1
             // 
-            menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, sobreToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(640, 28);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(24, 53);
+            label1.Name = "label1";
+            label1.Size = new Size(497, 92);
+            label1.TabIndex = 24;
+            label1.Text = "Bem vindo(a)! Aqui você pode cadastrar pessoas com facilidade.\r\n\r\n\r\n\r\n";
             // 
-            // cadastroToolStripMenuItem
+            // tituloCadastro
             // 
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(82, 24);
-            cadastroToolStripMenuItem.Text = "Cadastro";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
+            tituloCadastro.AutoSize = true;
+            tituloCadastro.Font = new Font("Segoe UI", 13F);
+            tituloCadastro.Location = new Point(24, 23);
+            tituloCadastro.Name = "tituloCadastro";
+            tituloCadastro.Size = new Size(192, 30);
+            tituloCadastro.TabIndex = 23;
+            tituloCadastro.Text = "Menu de Cadastro";
             // 
-            // sobreToolStripMenuItem
+            // label2
             // 
-            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(62, 24);
-            sobreToolStripMenuItem.Text = "Sobre";
-            sobreToolStripMenuItem.Click += sobreToolStripMenuItem_Click;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F);
+            label2.Location = new Point(24, 130);
+            label2.Name = "label2";
+            label2.Size = new Size(372, 40);
+            label2.TabIndex = 25;
+            label2.Text = "Bom, para saber mais sobre o programa ou ir direto\r\npara as funções você pode prescionar os botõs abaixo:\r\n";
             // 
-            // tituloPrincipal
+            // btnSobre
             // 
-            tituloPrincipal.AutoSize = true;
-            tituloPrincipal.Location = new Point(46, 88);
-            tituloPrincipal.Name = "tituloPrincipal";
-            tituloPrincipal.Size = new Size(192, 20);
-            tituloPrincipal.TabIndex = 1;
-            tituloPrincipal.Text = "Bem vindo(a) ao Programa!";
+            btnSobre.Location = new Point(24, 229);
+            btnSobre.Name = "btnSobre";
+            btnSobre.Size = new Size(143, 29);
+            btnSobre.TabIndex = 27;
+            btnSobre.Text = "Sobre o Sistema";
+            btnSobre.UseVisualStyleBackColor = true;
             // 
-            // descPrincipal
+            // btnCad
             // 
-            descPrincipal.AutoSize = true;
-            descPrincipal.Location = new Point(46, 136);
-            descPrincipal.Name = "descPrincipal";
-            descPrincipal.Size = new Size(551, 20);
-            descPrincipal.TabIndex = 2;
-            descPrincipal.Text = "Para ver mais sobre o programa, ou usa-lo vocè pode acessar as opções do menu.";
+            btnCad.Location = new Point(24, 194);
+            btnCad.Name = "btnCad";
+            btnCad.Size = new Size(148, 29);
+            btnCad.TabIndex = 26;
+            btnCad.Text = "Menu de Cadastro";
+            btnCad.UseVisualStyleBackColor = true;
+            btnCad.Click += btnCad_Click;
+            // 
+            // BottomToolStripPanel
+            // 
+            BottomToolStripPanel.Location = new Point(0, 0);
+            BottomToolStripPanel.Name = "BottomToolStripPanel";
+            BottomToolStripPanel.Orientation = Orientation.Horizontal;
+            BottomToolStripPanel.RowMargin = new Padding(4, 0, 0, 0);
+            BottomToolStripPanel.Size = new Size(0, 0);
+            // 
+            // TopToolStripPanel
+            // 
+            TopToolStripPanel.Location = new Point(0, 0);
+            TopToolStripPanel.Name = "TopToolStripPanel";
+            TopToolStripPanel.Orientation = Orientation.Horizontal;
+            TopToolStripPanel.RowMargin = new Padding(4, 0, 0, 0);
+            TopToolStripPanel.Size = new Size(0, 0);
+            // 
+            // RightToolStripPanel
+            // 
+            RightToolStripPanel.Location = new Point(0, 0);
+            RightToolStripPanel.Name = "RightToolStripPanel";
+            RightToolStripPanel.Orientation = Orientation.Horizontal;
+            RightToolStripPanel.RowMargin = new Padding(4, 0, 0, 0);
+            RightToolStripPanel.Size = new Size(0, 0);
+            // 
+            // LeftToolStripPanel
+            // 
+            LeftToolStripPanel.Location = new Point(0, 0);
+            LeftToolStripPanel.Name = "LeftToolStripPanel";
+            LeftToolStripPanel.Orientation = Orientation.Horizontal;
+            LeftToolStripPanel.RowMargin = new Padding(4, 0, 0, 0);
+            LeftToolStripPanel.Size = new Size(0, 0);
+            // 
+            // ContentPanel
+            // 
+            ContentPanel.Size = new Size(163, 96);
             // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 360);
-            Controls.Add(descPrincipal);
-            Controls.Add(tituloPrincipal);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            Controls.Add(btnSobre);
+            Controls.Add(btnCad);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(tituloCadastro);
             Margin = new Padding(2);
             Name = "frmPrincipal";
             Text = "Página Principal";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
-        private ToolStripMenuItem sobreToolStripMenuItem;
-        private Label tituloPrincipal;
-        private Label descPrincipal;
+        private Label label1;
+        private Label tituloCadastro;
+        private Label label2;
+        private Button btnSobre;
+        private Button btnCad;
+        private ToolStripPanel BottomToolStripPanel;
+        private ToolStripPanel TopToolStripPanel;
+        private ToolStripPanel RightToolStripPanel;
+        private ToolStripPanel LeftToolStripPanel;
+        private ToolStripContentPanel ContentPanel;
     }
 }
