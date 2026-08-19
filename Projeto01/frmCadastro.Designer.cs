@@ -35,7 +35,6 @@
             tituloNome = new Label();
             listaPessoas = new ListView();
             btnLimpar = new Button();
-            btnFechar = new Button();
             dtNascTitulo = new Label();
             telTitulo = new Label();
             emailTitulo = new Label();
@@ -44,20 +43,21 @@
             emailBox = new TextBox();
             tituloCadastro = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
+            cidadeBox = new TextBox();
             cidTitulo = new Label();
-            EstadoTitulo = new Label();
+            estadoTitulo = new Label();
             cepTitulo = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            cepBox = new TextBox();
+            estadoBox = new TextBox();
+            numBox = new TextBox();
             numTitulo = new Label();
             bairroTitulo = new Label();
             logTitulo = new Label();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            label2 = new Label();
+            lograBox = new TextBox();
+            bairroBox = new TextBox();
+            compleBox = new TextBox();
+            compleTitulo = new Label();
+            listaEnde = new ListView();
             SuspendLayout();
             // 
             // btnCad
@@ -92,6 +92,7 @@
             tituloCPF.Size = new Size(36, 20);
             tituloCPF.TabIndex = 5;
             tituloCPF.Text = "CPF:";
+            tituloCPF.Click += tituloCPF_Click;
             // 
             // tituloNome
             // 
@@ -106,7 +107,7 @@
             // 
             listaPessoas.Location = new Point(31, 298);
             listaPessoas.Name = "listaPessoas";
-            listaPessoas.Size = new Size(738, 140);
+            listaPessoas.Size = new Size(368, 140);
             listaPessoas.TabIndex = 12;
             listaPessoas.UseCompatibleStateImageBehavior = false;
             // 
@@ -118,16 +119,7 @@
             btnLimpar.TabIndex = 13;
             btnLimpar.Text = "Limpar";
             btnLimpar.UseVisualStyleBackColor = true;
-            // 
-            // btnFechar
-            // 
-            btnFechar.Location = new Point(694, 12);
-            btnFechar.Name = "btnFechar";
-            btnFechar.Size = new Size(94, 29);
-            btnFechar.TabIndex = 14;
-            btnFechar.Text = "Fechar";
-            btnFechar.UseVisualStyleBackColor = true;
-            btnFechar.Click += btnFechar_Click;
+            btnLimpar.Click += btnLimpar_Click_1;
             // 
             // dtNascTitulo
             // 
@@ -193,16 +185,16 @@
             label1.Font = new Font("Segoe UI", 10F);
             label1.Location = new Point(22, 53);
             label1.Name = "label1";
-            label1.Size = new Size(258, 23);
+            label1.Size = new Size(268, 23);
             label1.TabIndex = 22;
-            label1.Text = "Aqui você pode cadastr pessoas!";
+            label1.Text = "Aqui você pode cadastro pessoas!";
             // 
-            // textBox1
+            // cidadeBox
             // 
-            textBox1.Location = new Point(398, 163);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(158, 27);
-            textBox1.TabIndex = 28;
+            cidadeBox.Location = new Point(398, 163);
+            cidadeBox.Name = "cidadeBox";
+            cidadeBox.Size = new Size(158, 27);
+            cidadeBox.TabIndex = 28;
             // 
             // cidTitulo
             // 
@@ -213,14 +205,14 @@
             cidTitulo.TabIndex = 27;
             cidTitulo.Text = "Cidade:";
             // 
-            // EstadoTitulo
+            // estadoTitulo
             // 
-            EstadoTitulo.AutoSize = true;
-            EstadoTitulo.Location = new Point(333, 136);
-            EstadoTitulo.Name = "EstadoTitulo";
-            EstadoTitulo.Size = new Size(57, 20);
-            EstadoTitulo.TabIndex = 26;
-            EstadoTitulo.Text = "Estado:";
+            estadoTitulo.AutoSize = true;
+            estadoTitulo.Location = new Point(333, 136);
+            estadoTitulo.Name = "estadoTitulo";
+            estadoTitulo.Size = new Size(57, 20);
+            estadoTitulo.TabIndex = 26;
+            estadoTitulo.Text = "Estado:";
             // 
             // cepTitulo
             // 
@@ -231,26 +223,26 @@
             cepTitulo.TabIndex = 25;
             cepTitulo.Text = "CEP:";
             // 
-            // textBox2
+            // cepBox
             // 
-            textBox2.Location = new Point(375, 100);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(181, 27);
-            textBox2.TabIndex = 24;
+            cepBox.Location = new Point(375, 100);
+            cepBox.Name = "cepBox";
+            cepBox.Size = new Size(181, 27);
+            cepBox.TabIndex = 24;
             // 
-            // textBox3
+            // estadoBox
             // 
-            textBox3.Location = new Point(392, 133);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(164, 27);
-            textBox3.TabIndex = 23;
+            estadoBox.Location = new Point(392, 133);
+            estadoBox.Name = "estadoBox";
+            estadoBox.Size = new Size(164, 27);
+            estadoBox.TabIndex = 23;
             // 
-            // textBox4
+            // numBox
             // 
-            textBox4.Location = new Point(405, 253);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(151, 27);
-            textBox4.TabIndex = 34;
+            numBox.Location = new Point(405, 253);
+            numBox.Name = "numBox";
+            numBox.Size = new Size(151, 27);
+            numBox.TabIndex = 34;
             // 
             // numTitulo
             // 
@@ -279,57 +271,65 @@
             logTitulo.TabIndex = 31;
             logTitulo.Text = "Logradouro:";
             // 
-            // textBox5
+            // lograBox
             // 
-            textBox5.Location = new Point(429, 192);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(127, 27);
-            textBox5.TabIndex = 30;
+            lograBox.Location = new Point(429, 192);
+            lograBox.Name = "lograBox";
+            lograBox.Size = new Size(127, 27);
+            lograBox.TabIndex = 30;
             // 
-            // textBox6
+            // bairroBox
             // 
-            textBox6.Location = new Point(392, 221);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(164, 27);
-            textBox6.TabIndex = 29;
+            bairroBox.Location = new Point(392, 221);
+            bairroBox.Name = "bairroBox";
+            bairroBox.Size = new Size(164, 27);
+            bairroBox.TabIndex = 29;
             // 
-            // textBox7
+            // compleBox
             // 
-            textBox7.Location = new Point(578, 160);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(194, 53);
-            textBox7.TabIndex = 36;
-            //textBox7.TextChanged += textBox7_TextChanged;
+            compleBox.Location = new Point(578, 160);
+            compleBox.Multiline = true;
+            compleBox.Name = "compleBox";
+            compleBox.Size = new Size(194, 53);
+            compleBox.TabIndex = 36;
             // 
-            // label2
+            // compleTitulo
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(578, 130);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 20);
-            label2.TabIndex = 35;
-            label2.Text = "Complemento:";
+            compleTitulo.AutoSize = true;
+            compleTitulo.Location = new Point(578, 130);
+            compleTitulo.Name = "compleTitulo";
+            compleTitulo.Size = new Size(107, 20);
+            compleTitulo.TabIndex = 35;
+            compleTitulo.Text = "Complemento:";
+            // 
+            // listaEnde
+            // 
+            listaEnde.Location = new Point(405, 298);
+            listaEnde.Name = "listaEnde";
+            listaEnde.Size = new Size(363, 140);
+            listaEnde.TabIndex = 37;
+            listaEnde.UseCompatibleStateImageBehavior = false;
             // 
             // frmCadastro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox7);
-            Controls.Add(label2);
-            Controls.Add(textBox4);
+            Controls.Add(listaEnde);
+            Controls.Add(compleBox);
+            Controls.Add(compleTitulo);
+            Controls.Add(numBox);
             Controls.Add(numTitulo);
             Controls.Add(bairroTitulo);
             Controls.Add(logTitulo);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
-            Controls.Add(textBox1);
+            Controls.Add(lograBox);
+            Controls.Add(bairroBox);
+            Controls.Add(cidadeBox);
             Controls.Add(cidTitulo);
-            Controls.Add(EstadoTitulo);
+            Controls.Add(estadoTitulo);
             Controls.Add(cepTitulo);
-            Controls.Add(textBox2);
-            Controls.Add(textBox3);
+            Controls.Add(cepBox);
+            Controls.Add(estadoBox);
             Controls.Add(label1);
             Controls.Add(tituloCadastro);
             Controls.Add(emailBox);
@@ -338,7 +338,6 @@
             Controls.Add(emailTitulo);
             Controls.Add(telTitulo);
             Controls.Add(dtNascTitulo);
-            Controls.Add(btnFechar);
             Controls.Add(btnLimpar);
             Controls.Add(listaPessoas);
             Controls.Add(tituloNome);
@@ -367,7 +366,6 @@
         private Label tituloSetor;
         private ListView listaPessoas;
         private Button btnLimpar;
-        private Button btnFechar;
         private Label dtNascTitulo;
         private Label telTitulo;
         private Label emailTitulo;
@@ -376,19 +374,20 @@
         private TextBox emailBox;
         private Label tituloCadastro;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox cidadeBox;
         private Label cidTitulo;
-        private Label EstadoTitulo;
+        private Label estadoTitulo;
         private Label cepTitulo;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox cepBox;
+        private TextBox estadoBox;
+        private TextBox numBox;
         private Label numTitulo;
         private Label bairroTitulo;
         private Label logTitulo;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private Label label2;
+        private TextBox lograBox;
+        private TextBox bairroBox;
+        private TextBox compleBox;
+        private Label compleTitulo;
+        private ListView listaEnde;
     }
 }

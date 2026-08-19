@@ -10,8 +10,11 @@ namespace Projeto01.Models
     {
         public string cpf { get; set; }
         public string nome { get; set; }
-        public string idade { get; set; }
-        public string funcao { get; set; }
-        public string setor { get; set; }
+        public string data { get; set; }
+        public string telephone { get; set; }
+        public string email { get; set; }
+
+
+        public Endereco Endereco { get; set; }
     }
 }

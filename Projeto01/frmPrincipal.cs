@@ -7,7 +7,7 @@ namespace Projeto01
             InitializeComponent();
         }
 
-        
+
 
         private void btnCad_Click(object sender, EventArgs e)
         {
@@ -15,7 +15,7 @@ namespace Projeto01
             cadForm.Show();
         }
 
-        private void btnSobre_Click(object sender, EventArgs e)
+        private void btnSobre_Click_1(object sender, EventArgs e)
         {
             frmSobre sobreForm = new frmSobre();
             sobreForm.ShowDialog();

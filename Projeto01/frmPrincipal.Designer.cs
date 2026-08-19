@@ -78,6 +78,7 @@
             btnSobre.TabIndex = 27;
             btnSobre.Text = "Sobre o Sistema";
             btnSobre.UseVisualStyleBackColor = true;
+            btnSobre.Click += btnSobre_Click_1;
             // 
             // btnCad
             // 
